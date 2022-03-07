@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:inherited_sample/presentation/pages/list.dart';
-import 'package:inherited_sample/presentation/pages/load_more_list_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +16,8 @@ class MyApp extends StatelessWidget {
     final _router = GoRouter(routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const MyHomePage(title: 'Flutter Demo Home Page'),
+        builder: (context, state) =>
+          const MyHomePage(title: 'Flutter Demo Home Page'),
       ),
       GoRoute(
         path: '/listpage',

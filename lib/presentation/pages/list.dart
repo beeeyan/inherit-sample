@@ -9,10 +9,10 @@ class ListPage extends StatefulWidget {
 }
 
 class _ListPageState extends State<ListPage> {
-  var noList = [for (var i = 1; i <= 50; i++) i];
+  List<int> noList = [for (var i = 1; i <= 50; i++) i];
 
-  Future _loadData() async {
-    await Future.delayed(const Duration(seconds: 2));
+  Future<void> _loadData() async {
+    await Future<void>.delayed(const Duration(seconds: 2));
 
     print('Loaded New Data');
 
