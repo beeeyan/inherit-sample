@@ -64,9 +64,20 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            ElevatedButton(
-              child: const Text('リスト表示画面'),
-              onPressed: () => context.push('/listpage'),
+            Container(
+              margin: const EdgeInsets.symmetric(vertical: 15),
+              child: ElevatedButton(
+                child: const Text('リスト表示画面'),
+                onPressed: () => context.push('/listpage'),
+            ),),
+            Container(
+              margin: const EdgeInsets.symmetric(vertical: 15),
+              child: ElevatedButton(
+                child: const Text('リスト表示画面'),
+                onPressed: () => context.push('/listpage'),
+            ),),
+            const SizedBox(
+              height: 15,
             ),
             const Text(
               'You have pushed the button this many times:',
