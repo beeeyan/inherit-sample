@@ -21,7 +21,7 @@ class _ListPageState extends State<ListPage> {
       noList.insert(0, min - 1);
       // final max = noList.last;
       // noList.add(max + 1);
-      print('itemList: ' + noList.toString());
+      print('itemList:${noList.toString()}');
     });
   }
 
