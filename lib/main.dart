@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:inherited_sample/domain/count_manager.dart';
+import 'package:inherited_sample/presentation/pages/inherited_a.dart';
+import 'package:inherited_sample/presentation/pages/inherited_b.dart';
 import 'package:inherited_sample/presentation/pages/list.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const CountManeger(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -23,6 +26,16 @@ class MyApp extends StatelessWidget {
         path: '/listpage',
         builder: (context, state) => const ListPage(),
       ),
+      GoRoute(
+        path: '/inherited/a',
+        builder: (context, state) =>
+          const InheritedAPage(),
+      ),
+      GoRoute(
+        path: '/inherited/b',
+        builder: (context, state) =>
+          const InheritedBPage(),
+      )
     ]);
 
     return MaterialApp.router(
@@ -67,14 +80,14 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               margin: const EdgeInsets.symmetric(vertical: 15),
               child: ElevatedButton(
-                child: const Text('リスト表示画面'),
-                onPressed: () => context.push('/listpage'),
+                child: const Text('Aページ'),
+                onPressed: () => context.push('/inherited/a'),
             ),),
             Container(
               margin: const EdgeInsets.symmetric(vertical: 15),
               child: ElevatedButton(
-                child: const Text('リスト表示画面'),
-                onPressed: () => context.push('/listpage'),
+                child: const Text('Bページ'),
+                onPressed: () => context.push('/inherited/b'),
             ),),
             const SizedBox(
               height: 15,
