@@ -9,6 +9,7 @@ class MessageData extends InheritedWidget {
   // InheritedWidgetのプロパティは変更不可能
   String get message => '共通のメッセージ';
 
+  // 更新を伝搬させるか否かの制御
   @override
   bool updateShouldNotify(covariant InheritedWidget oldWidget) {
     return true;
