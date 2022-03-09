@@ -9,12 +9,9 @@ class ShowCount extends StatelessWidget {
   Widget build(BuildContext context) {
     final count = CountManeger.of(context).count;
     
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 15),
-      child: Text(
+    return Text(
         '$count',
         style: Theme.of(context).textTheme.headline4,
-      ),
-    );
+      );
   }
 }

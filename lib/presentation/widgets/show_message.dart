@@ -11,9 +11,9 @@ class ShowMessage extends StatelessWidget {
     final message =
       context.dependOnInheritedWidgetOfExactType<MessageData>()!.message;
 
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 15),
-      child: Text(message),
+    return Text(
+      message,
+      style: Theme.of(context).textTheme.headline4,
     );
   }
 }
