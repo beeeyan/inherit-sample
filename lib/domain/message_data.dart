@@ -14,4 +14,9 @@ class MessageData extends InheritedWidget {
   bool updateShouldNotify(covariant InheritedWidget oldWidget) {
     return true;
   }
+
+  // 慣習としてstatic メソッドの「of」を実装する。
+  // BuildContext.dependOnInheritedWidgetOfExactTypeを使わなくていいように
+  static MessageData of(BuildContext context) =>
+    context.dependOnInheritedWidgetOfExactType<MessageData>()!;
 }
