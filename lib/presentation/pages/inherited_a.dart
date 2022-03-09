@@ -1,8 +1,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:inherited_sample/domain/message_data.dart';
-import 'package:inherited_sample/presentation/widgets/count_button.dart';
-import 'package:inherited_sample/presentation/widgets/show_count.dart';
 import 'package:inherited_sample/presentation/widgets/show_message.dart';
 
 class InheritedAPage extends StatelessWidget {
@@ -18,9 +16,8 @@ class InheritedAPage extends StatelessWidget {
           child : Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const <Widget>[
+              // Widgetツリーの上層部に、作ったInheritedWidgetを配置
               MessageData(child: ShowMessage(),),
-              ShowCount(),
-              CountButton(),
             ],
           ),
         ),

@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:inherited_sample/domain/count_manager.dart';
 import 'package:inherited_sample/presentation/pages/inherited_a.dart';
 import 'package:inherited_sample/presentation/pages/inherited_b.dart';
-import 'package:inherited_sample/presentation/pages/list.dart';
 
 void main() {
-  runApp(const CountManeger(child: MyApp()));
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -21,10 +19,6 @@ class MyApp extends StatelessWidget {
         path: '/',
         builder: (context, state) =>
           const MyHomePage(title: 'Flutter Demo Home Page'),
-      ),
-      GoRoute(
-        path: '/listpage',
-        builder: (context, state) => const ListPage(),
       ),
       GoRoute(
         path: '/inherited/a',
