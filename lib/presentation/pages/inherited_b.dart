@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:inherited_sample/domain/message_data.dart';
 import 'package:inherited_sample/presentation/widgets/show_message.dart';
 
 class InheritedBPage extends StatelessWidget {
@@ -16,8 +15,7 @@ class InheritedBPage extends StatelessWidget {
           child : Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const <Widget>[
-              // Widgetツリーの上層部に、作ったInheritedWidgetを配置
-              MessageData(child: ShowMessage(),),
+              ShowMessage(),
             ],
           ),
         ),

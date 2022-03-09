@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:inherited_sample/domain/message_data.dart';
 import 'package:inherited_sample/presentation/pages/inherited_a.dart';
 import 'package:inherited_sample/presentation/pages/inherited_b.dart';
 
 void main() {
-  runApp(const MyApp());
+  // Widgetツリーの上層部に、作ったInheritedWidgetを配置
+  runApp(const MessageData(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -63,6 +65,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    // InheritedWidgetで作成したMessageDataから値を取得する。
+    final message =
+      context.dependOnInheritedWidgetOfExactType<MessageData>()!.message;
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -71,6 +76,10 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Text(
+              message,
+              style: Theme.of(context).textTheme.headline4,
+            ),
             Container(
               margin: const EdgeInsets.symmetric(vertical: 15),
               child: ElevatedButton(
