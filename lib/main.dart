@@ -1,19 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:inherited_sample/domain/count_manager.dart';
 import 'package:inherited_sample/domain/message_data.dart';
 import 'package:inherited_sample/presentation/pages/inherited_a.dart';
 import 'package:inherited_sample/presentation/pages/inherited_b.dart';
 import 'package:inherited_sample/presentation/pages/list.dart';
 
 void main() {
-  runApp(
-    const MessageData(
-      child: CountManeger(
-        child: MyApp()
-      )
-    )
-  );
+  // Widgetツリーの上層部に、作ったInheritedWidgetを配置
+  runApp(const MessageData(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
