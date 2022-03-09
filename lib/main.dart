@@ -76,6 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    // InheritedWidgetを継承して作成したMessageDataから値を取得する。
     final message = MessageData.of(context).message;
     return Scaffold(
       appBar: AppBar(
