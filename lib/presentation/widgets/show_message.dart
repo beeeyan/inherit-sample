@@ -8,7 +8,7 @@ class ShowMessage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // InheritedWidgetで作成したMessageDataから値を取得する。
+    // InheritedWidgetを継承して作成したMessageDataから値を取得する。
     final message =
       context.dependOnInheritedWidgetOfExactType<MessageData>()!.message;
 
