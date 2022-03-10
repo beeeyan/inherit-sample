@@ -3,7 +3,6 @@ import 'package:go_router/go_router.dart';
 import 'package:inherited_sample/domain/message_data.dart';
 import 'package:inherited_sample/presentation/pages/inherited_a.dart';
 import 'package:inherited_sample/presentation/pages/inherited_b.dart';
-import 'package:inherited_sample/presentation/pages/list.dart';
 
 void main() {
   // Widgetツリーの上層部に、作ったInheritedWidgetを配置
@@ -22,10 +21,6 @@ class MyApp extends StatelessWidget {
         path: '/',
         builder: (context, state) =>
           const MyHomePage(title: 'Flutter Demo Home Page'),
-      ),
-      GoRoute(
-        path: '/listpage',
-        builder: (context, state) => const ListPage(),
       ),
       GoRoute(
         path: '/inherited/a',
